@@ -10,5 +10,18 @@ services:
       - POSTGRES_PASSWORD=1234
     volumes:
       - pg-data:/var/lib/postgresql
+  api: 
+    build: ./api/v1
+    ports:
+      - 5000:5000
+    depends_on:
+      - database
+  dashboad:
+    build: ./dashboard
+    ports:
+      - 3000:3000
+    depends_on:
+      - api
+
 volumes:
   pg-data:
