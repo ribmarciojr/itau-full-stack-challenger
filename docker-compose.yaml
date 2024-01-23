@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database:
+    image: postgres:latest
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=itau_dashboard
+      - POSTGRES_PASSWORD=1234
+    volumes:
+      - pg-data:/var/lib/postgresql
+volumes:
+  pg-data:
