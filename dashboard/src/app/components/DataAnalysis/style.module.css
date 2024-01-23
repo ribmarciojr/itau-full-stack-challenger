@@ -1,0 +1,7 @@
+.panel_box {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}

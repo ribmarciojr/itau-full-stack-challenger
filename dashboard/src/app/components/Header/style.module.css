@@ -1,0 +1,44 @@
+.form_box {
+    width: 100vw;
+    height: 112px;
+    background-color: #00B8E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_content {
+    width: 780px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr;
+    gap: 30px;
+}
+
+.data_input {
+    width: 200px;
+    height: 30px;
+    padding: 10px 32px 10px 32px;
+    border-radius: 2px;
+    border: none;
+}
+
+.send_data_btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #00B8E2;
+    border-color: white;
+    color: white;
+    border-style: solid;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.errors_box {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 200px;
+}

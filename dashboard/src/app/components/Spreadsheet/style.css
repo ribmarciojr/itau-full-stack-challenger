@@ -1,0 +1,22 @@
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px;
+}
+
+tr {
+    height: 32px;
+}
+
+table {
+    width: 474px;
+    color: #808080;
+}
+
+
+tr > td:first-child, 
+tr > td:last-child,
+tr > th:first-child, 
+tr > th:last-child {
+    text-align: center;
+}

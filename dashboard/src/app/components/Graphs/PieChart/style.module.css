@@ -1,0 +1,26 @@
+.chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        yellow 0% 20%,
+        green 20% 100%
+    );
+    z-index: 1;
+}
+
+/* .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(black 0% 100%);
+    align-items: center;
+    z-index: 10;
+    float: left;
+}
