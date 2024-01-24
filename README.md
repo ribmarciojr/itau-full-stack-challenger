@@ -100,7 +100,7 @@ A URL base para todas as requisições à API é: `https://localhost:5000`
 
 #### 1. Cria participantes
 
-##### [POST] /create/participant
+##### [POST] /participant/create
 
 **Descrição**: Insere um novo participante no banco de dados, caso válido.
 
@@ -150,7 +150,7 @@ GET /participants/all
 
 **Exemplo de Requisição:**
 ```json
-DELETE /create/participant
+DELETE /participant/delete
 {
     "first_name": "Jhon"
 }
