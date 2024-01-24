@@ -36,7 +36,7 @@ export default function Header() {
 
         const participantInformation = JSON.stringify(objectResponse)
         
-        const url = "http://127.0.0.1:5000/create/participant"
+        const url = "http://127.0.0.1:5000/participant/create"
         
         try {
             const request = await fetch(url, {
