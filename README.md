@@ -117,7 +117,7 @@ A URL base para todas as requisições à API é: `https://localhost:5000`
 ```json
 
 
-POST /create/participant
+POST /participant/create
 {
     "first_name": "Jhon",
     "last_name": "Dow",
@@ -138,7 +138,7 @@ GET /participants/all
 
 #### 3. Deleta participantes
 
-##### [DELETE] /create/participant
+##### [DELETE] /participant/delete
 **Descrição**: Deleta um participante do banco de dados.
 
 <br />
