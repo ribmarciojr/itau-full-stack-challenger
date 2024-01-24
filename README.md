@@ -162,3 +162,9 @@ Esse projeto foi construído com:
 
 Email: marciojunior2109@gmail.com
 Linkedin: https://www.linkedin.com/in/ribmarciojunior/
+
+<br />
+
+<p align="center">
+    Copyright (c) 2024 Ribmarciojr
+</p>
