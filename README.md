@@ -18,11 +18,11 @@
 
 <br />
 
-# Desafio técnico Cubo Network
+## Desafio técnico Cubo Network
 
 - Esse repositório representa minha solução ao desafio técnico, para desenvolvedores full-stack, da Cubo Network, iniciativa da Itaú, postado, em 2016, no repositório: https://github.com/cubonetwork/fullstack-challenge.
 
-# Rodar por Docker
+## Rodar por Docker
 
 - O Docker foi utilizado nesse projeto para encapsular os diferentes serviços — dashboard, api, database —, da aplicação, tal como as dependências necessárias para bom funcionamento.
 
@@ -44,18 +44,18 @@ O comando acima deve ser executado na raiz do projeto.
 > Agora o projeto pode ser acessado no browser através do endereço: ```http://localhost:3000```
 
 
-# Rodar Manualmente
+## Rodar Manualmente
 
-## Requisitos
+### Requisitos
 Lista de requisitos necessários para executar o projeto. Isso pode incluir software, hardware, bibliotecas específicas, etc.
 
 - Node.js: 18.17.0+
 - Python: 3.11.0+
 
-## Configuração do Ambiente
+### Configuração do Ambiente
 Passos para configurar o ambiente de desenvolvimento. Isso pode incluir a instalação de dependências, configuração de variáveis de ambiente, etc.
 
-### 1. Dependências Python
+#### 1. Dependências Python
 ```bash
 # Em ./api/v1 
 pip install -r requirements.txt
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 flask --app run.py run --host=0.0.0.0
 ```
 
-### 2. Dependências Node.js
+#### 2. Dependências Node.js
 ```bash
 # Em ./dashboard 
 npm install
@@ -80,36 +80,43 @@ O banco de dados PostgresSQL deve ser criado separadamente com as descrições d
 
 ---
 
-# O projeto: 
+## O Projeto: 
 
-# Especificação da interface gráfica 
+## Especificação da interface gráfica 
 <img src="./readme_files/itau_front_end.jpg">
 
-## Visão Geral
+### Visão Geral
 Como especificado no desafio, o front-end segue a implementação dinâmica da tabela, gráfico de pizza e formulário para adição de novos membros.
 
 <br />
 
-# Especificação de Rotas da API
+## Especificação de Rotas da API
 
 
-## Base URL
+### Base URL
 A URL base para todas as requisições à API é: `https://localhost:5000`
 
-## Recursos
+### Recursos
 
-### 1. Cria participantes
+#### 1. Cria participantes
 
-#### [POST] /create/participant
+##### [POST] /create/participant
+
 **Descrição**: Insere um novo participante no banco de dados, caso válido.
+
+<br />
 
 **Parâmetros esperados:**
 - `first_name`: Deve conter apenas somente letras. Mínimo três.
 - `last_name`: Deve conter apenas somente letras. Mínimo três
 - `participation`: Deve conter números decimais.
 
+<br />
+
 **Exemplo de Requisição:**
 ```json
+
+
 POST /create/participant
 {
     "first_name": "Jhon",
@@ -117,25 +124,29 @@ POST /create/participant
     "participation": "30.00" 
 }
 ```
-### 2. Lista participantes
+#### 2. Lista participantes
 
-#### [GET] /participants/all
+##### [GET] /participants/all
 **Descrição**: Obtém uma lista de todos os participantes.
 
+<br />
 
 **Exemplo de Requisição:**
 ```json
 GET /participants/all
 ```
 
-### 3. Deleta participantes
+#### 3. Deleta participantes
 
-#### [DELETE] /create/participant
+##### [DELETE] /create/participant
 **Descrição**: Deleta um participante do banco de dados.
+
+<br />
 
 **Parâmetros esperados:**
 - `first_name`: Deve conter apenas somente letras. Mínimo três.
 
+<br />
 
 **Exemplo de Requisição:**
 ```json
@@ -144,6 +155,8 @@ DELETE /create/participant
     "first_name": "Jhon"
 }
 ```
+
+<br />
 
 # Tecnologias 
 
@@ -158,9 +171,12 @@ Esse projeto foi construído com:
 - HTML
 - CSS
 
+<br />
+
 # Contato
 
 Email: marciojunior2109@gmail.com
+<br />
 Linkedin: https://www.linkedin.com/in/ribmarciojunior/
 
 <br />
