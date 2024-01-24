@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, abort
+from flask import request, jsonify
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -57,16 +57,9 @@ def create_app():
 
         return hasAvailable
     
-    @app.route("/create/participant", methods=["POST"])
+    @app.route("/participant/create", methods=["POST"])
     @app.input(ParticipantIn, arg_name="participant_information")
-    def create_participant(participant_information):
-        """
-
-        first_name
-        last_name
-        participation
-
-        """     
+    def create_participant(participant_information):    
         user: dict = participant_information
 
         hasChartSpace = check_chart_available(float(user["participation"]))
@@ -87,7 +80,6 @@ def create_app():
         add_participant =  db.session.add(participant)
         db.session.commit()
 
-        # print(data)
 
         return {"message": "Participante cadastrado!", "status_code": 200}
     
