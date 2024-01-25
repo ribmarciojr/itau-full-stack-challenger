@@ -1,7 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
-import styles from "./style.module.css"
+import "./style.css"
 import { Chart } from "react-google-charts";
+import { Skeleton } from "@mui/material";
 
 const options = {
     pieHole: 0.4,
@@ -26,6 +27,7 @@ type ParticipantsPayload = [
     ]
 export default function PieChart() {
     const [data, setData] = useState<InitStatus>(InitialData)
+    const [payload, setPayload] = useState<(string | number)[][]>()
 
     function handleInsertChartData(participants: ParticipantsPayload){
         const newData = [...data]
@@ -42,7 +44,7 @@ export default function PieChart() {
         })
 
         setData(newData)
-        console.log(data)
+        setPayload(newData)
     }   
     
     let loadChart = true
@@ -61,14 +63,13 @@ export default function PieChart() {
         }
     }, [])
 
-    return (
-        <Chart
+    return (       
+            !!payload ? <Chart
             chartType="PieChart"
             data={data}
             options={options}
             width="400px"
             height="400px"
-            legendToggle
-        />
+            legendToggle /> : <Skeleton variant="circular" width={250} height={250} />
     )
 }

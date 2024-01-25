@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5433,
+            "driver": "PostgreSQL",
+            "name": "Itau-tech",
+            "database": "itau_dashboard",
+            "username": "admin",
+            "password": "1234"
+        }
+    ]
+}

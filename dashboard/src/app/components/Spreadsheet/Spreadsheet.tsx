@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import "./style.css"
+import { Skeleton } from "@mui/material"
 
 type ParticipantsList = [
     {
@@ -33,6 +34,7 @@ export default function Spreadsheet() {
 
     return (
         <>
+            {!!participants ? 
             <table>
                 <thead>
                     <tr>
@@ -54,11 +56,12 @@ export default function Spreadsheet() {
                                 <td>{participant.participation}</td>
                             </tr>
                         </tbody>
-                    )
-                    
-                })}
+                    ) 
+                })                
+               }
 
-            </table>
+            </table> : <Skeleton variant="rounded" width={474} height={128} />    
+        }
         </>
     )
 }
